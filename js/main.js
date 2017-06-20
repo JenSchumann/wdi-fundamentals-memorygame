@@ -24,6 +24,8 @@ var cards = [
 	}
 	];
 
+// I think there should be some type of variable cardId defined here (as a method??)
+
 var cardsInPlay = [];
  cardsInPlay.push(cards[cardId].rank);
 
