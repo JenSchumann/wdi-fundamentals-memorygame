@@ -38,18 +38,32 @@ var checkForMatch = function() {
 	};
 	
 // f to randomize flipping process... eventually?
-var flipCard = function(cardId) {
+var flipCard = function() {
+	var cardId = document.getElementsByIdName(this).setAttribute(cards);
 	console.log("User flipped " + cards[cardId].rank);
+	this.getAttribute(cards[cardId].cardImage);
 	if (cardsInPlay.length === 2) {
 	checkForMatch();
 }
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
 }
-};
-flipCard(0);
-flipCard(1);
-checkForMatch(cardInPlay);
 
+var createBoard = function() {
+	for (var i = 0; i < cards.length; i++) {
+
+	var cardElement = document.createElement('img');
+	cardElement.setAttribute('src', 'images/back.png');
+	cardElement.setAttribute('data-id', i);
+	
+	var createNewCard = function() {
+		var cards = document.querySelectorAll('.cardElement');
+		documentgetElementsById('game-board').appendChild(cardElement);  
+		}
+		};
+document.querySelectorAll('.cards')[0].addEventListener('click', flipCard);
+createBoard(); 
+}
+};
 
 
